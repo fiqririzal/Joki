@@ -32,10 +32,12 @@ Route::get('/logout', [AuthController::class,'logout']);
         Route::get('/dashboard',function(){ return view('layouts.dashboard');});
     Route::get('/dosen',[DosenController::class,'index'])->name('dosen.index');
     Route::get('/dosen/input',[DosenController::class,'create'])->name('dosen.baru');
+    Route::get('/dosen/{id}',[DosenController::class,'destroy'])->name('dosen.baru');
     Route::post('/dosen/simpan',[DosenController::class,'store'])->name('dosen.simpan');
 
     Route::get('/mahasiswa',[MahasiswaController::class,'index'])->name('mahasiswa.index');
     Route::get('/mahasiswa/input',[MahasiswaController::class,'create'])->name('mahasiswa.baru');
+    Route::get('/mahasiswa/{id}',[MahasiswaController::class,'destroy'])->name('mahasiswa.baru');
     Route::post('/mahasiswa/simpan',[MahasiswaController::class,'store'])->name('mahasiswa.simpan');
 
     });

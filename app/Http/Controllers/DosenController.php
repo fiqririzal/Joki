@@ -38,5 +38,12 @@ class DosenController extends Controller
     ]);
     return redirect('/dosen');
 }
+public function destroy($id)
+{
+    $dosen=Dosen::find($id);
 
+    $dosen->delete();
+
+    return redirect('/dosen');
+}
 }

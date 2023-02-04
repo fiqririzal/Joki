@@ -16,6 +16,7 @@
         <th scope="col">Nama</th>
         <th scope="col">Gambar</th>
         <th scope="col">Jabatan</th>
+        <th scope="col">Aksi</th>
       </tr>
     </thead>
     <tbody>
@@ -26,6 +27,9 @@
         <td><img src="{{ asset('images/dosen/' . $item->image) }} "width="50px">
         </td>
         <td>{{$item->jabatan}}</td>
+        <td>
+        <a href="/dosen/{{$item->id}}" class="btn btn-info btn-sm">Delete</a></td>
+
         @empty
 
         @endforelse

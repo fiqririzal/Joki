@@ -19,6 +19,7 @@
         <th scope="col">TGL Lahir</th>
         <th scope="col">Asal Daerah</th>
         <th scope="col">Motto</th>
+        <th scope="col">Aksi</th>
       </tr>
     </thead>
     <tbody>
@@ -30,6 +31,8 @@
         <td>{{$item->tgl_lahir}}</td>
         <td>{{$item->daerah}}</td>
         <td>{{$item->moto}}</td>
+        <td>
+        <a href="/mahasiswa/{{$item->id}}" class="btn btn-info btn-sm">Delete</a></td>
         @empty
 
         @endforelse

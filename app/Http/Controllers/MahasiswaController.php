@@ -28,4 +28,12 @@ class MahasiswaController extends Controller
         ]);
         return redirect('/mahasiswa');
     }
+    public function destroy($id)
+    {
+        $mahasiswa=Mahasiswa::find($id);
+
+        $mahasiswa->delete();
+
+        return redirect('/mahasiswa');
+    }
 }
